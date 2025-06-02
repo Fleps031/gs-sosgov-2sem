@@ -4,3 +4,7 @@
 * {
   font-family: "League Spartan", sans-serif;
 }
+
+@theme {
+  --color-sos-purple-100: rgba(124, 81, 223, 1)
+}
