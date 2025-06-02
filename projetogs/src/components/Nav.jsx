@@ -1,7 +1,7 @@
 function Nav() {
   return (
     <>
-     <p>Nav Works!</p>
+     <p className="text-3xl font-thin">Nav Works!</p>
     </>
   )
 }
