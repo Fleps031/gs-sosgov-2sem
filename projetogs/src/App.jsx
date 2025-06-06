@@ -9,11 +9,14 @@ function App() {
 
   return (
     <>
-     <Nav></Nav>
-     <Home></Home>
-     <Solution></Solution>
-     <About></About>
-     <Footer></Footer>
+      <Nav></Nav>
+      <main>
+        <Home></Home>
+        <About></About>
+        <Solution></Solution>
+      </main>
+      <Footer></Footer>
+    
     </>
   )
 }
