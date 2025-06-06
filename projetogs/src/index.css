@@ -6,5 +6,6 @@
 }
 
 @theme {
-  --color-sos-purple-100: rgba(124, 81, 223, 1)
+  --color-sos-purple-100: rgba(124, 81, 223, 1);
+  --color-sos-slide-cover-100: rgba(0, 0, 0, 0.55);
 }
