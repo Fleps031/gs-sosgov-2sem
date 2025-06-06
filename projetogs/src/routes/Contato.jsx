@@ -66,8 +66,8 @@ function Contact(){
 
     return(
         <>
-            <section className="flex flex-col gap-4 justify-between items-center w-full h-full pt-10">
-                <h1 className="text-center text-2xl">Dúvidas ou sugestões? Entre em contato conosco!</h1>
+            <section className="flex flex-col gap-4 justify-between items-center w-full h-full pt-10 pb-28">
+                <h1 className="text-center md:text-3xl text-xl">Dúvidas ou sugestões? Entre em contato conosco!</h1>
                 <div className="w-full sm:w-[50%] flex flex-col items-center justify-center">
                     <form onSubmit={submitContact} className="w-[100%] gap-7 flex flex-col items-center">
                         <div className="flex flex-col w-[80%]">
