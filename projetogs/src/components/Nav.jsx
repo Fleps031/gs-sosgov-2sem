@@ -8,7 +8,7 @@ function Nav() {
                 <img src={logo}></img>
             </div>
 
-            <button className='bg-sos-purple-100 min-w-21 h-6 text-sm rounded-xl text-white text-thin'>
+            <button className='bg-sos-purple-100 min-w-21 h-6 text-sm rounded-xl text-white text-thin cursor-pointer  hover:bg-black active:bg-black transition'>
                 Obter
             </button>
         </header>

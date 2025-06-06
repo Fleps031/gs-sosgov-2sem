@@ -9,6 +9,7 @@ import RescueButton from '../assets/imgs/CarRes2.png';
 import RescueRequest from '../assets/imgs/CarRes3.png';
 
 import PolicialSOS from '../assets/imgs/PolicialSOS.svg'
+import BarcoSOS from '../assets/imgs/BarcoSOS.svg'
 
 import Slider from '../assets/Slider.svg'
 
@@ -67,7 +68,7 @@ function CarrosselResgate(props){
   const sliderClass =`
       w-8 h-8 sm:min-w-[128px] sm:min-h-[128px] min-w-[64px] min-h-[64px] rounded-full border-sos-purple-100 border-1 cursor-pointer 
       hover:bg-sos-purple-100 focus:bg-sos-purple-100 hover:transform-[scale(1.1)] 
-      ease-in-out duration-300 flex justify-center items-center`;
+      ease-in duration-200 flex justify-center items-center`;
 
 
   function changeSlide(index) {
@@ -94,8 +95,7 @@ function CarrosselResgate(props){
           </div>
           <div className='flex flex-col justify-start align-center md:absolute top-10 left-60 z-1 sm:gap-16 gap-6 mt-12 py-6 sm:pb-6'>
             {props.slides.map((s, i)=>{     
-                return <>
-                  <div className='flex flex-row gap-4 w-full h-full justify-center pl-5'>
+                return <div className='flex flex-row gap-4 w-full h-full justify-start pl-5' key={`slider_`+i}>
                      <div className={`${sliderClass} ${currentSlide == i ? 'bg-sos-purple-100' : 'bg-zinc-400 border-zinc-400 hover:border-sos-purple-100'}`} onClick={() => changeSlide(i)}>
                       <p className={`text-4xl font-semibold text-center text-white`}>{i + 1}</p>
                     </div>
@@ -104,7 +104,6 @@ function CarrosselResgate(props){
                         <p className={`sm:text-lg text-md ${currentSlide == i ? 'text-black' : 'text-zinc-400'}`}>{s.description}</p>
                     </div>
                   </div>
-                </> 
             })}
           </div>
       </div>
@@ -128,25 +127,45 @@ function Solution() {
       {label:'Selecione sua necessidade', description:'Com poucos cliques informe qual sua necessidade durante a emergência, para que os socorristas saibam exatamente como te ajudar :)', src: RescueRequest },
     ]
 
+    let slidesResgateVoluntario = [
+      {label:'Resgates na sua região atualizados em tempo real', description:'', src: RescueDownload },
+      {label:'Filtre as solicitações próximas de você', description:'', src: RescueButton },
+      {label:'Aceite o chamado e salve vidas!', description:'', src: RescueRequest },
+    ]
+
     return (
       <>
-        <section className='flex flex-col w-full h-full gap-4 items-center'>
-            <section className="flex flex-col gap-6 w-full h-full items-center sm:p-8 p-4">
-                <div className="w-full h-0.5 bg-sos-purple-100"></div>
+        <section className='flex flex-col w-full h-full gap-4 items-center pb-10'>
+            <div className="w-full h-0.5 bg-sos-purple-100"></div>
 
-                <h1 className="text-3xl text-center mt-8">Como o SOS GOV te ajuda</h1>
-
-                <Carrossel slides={slidesCarrossel}/>
+            <h1 className="text-3xl text-center mt-8">Como o SOS GOV te ajuda</h1>
+            <section className='flex flex-row w-full justify-center flex-wrap gap-12 lg:gap-0'>
+                <section className="flex flex-col gap-6 lg:w-[90%] w-[100%] h-full items-center sm:p-0 p-0">
+                  <Carrossel slides={slidesCarrossel}/>
+                </section>
             </section>
-            <div className="w-[50%] h-0.5 bg-sos-purple-100"></div>
-            <section className="flex flex-col gap-6 w-full h-full items-center lg:relative static">
-                <h1 className="text-3xl text-center mt-8 px-4">Veja como é fácil solicitar um resgate e contatar as autoridades locais diretamente:</h1>
 
-                <div className='flex w-full justify-center gap-2 md:static relative'>
-                    <img className='absolute md:static lg:w-[200px] md:w-[160px] w-[80px] sm:w-[120px] sm:top-68 sm:right-12 top-49 right-[1vw]  z-1 ' src={PolicialSOS}></img>
+
+            <div className="w-[50%] h-0.5 bg-sos-purple-100"></div>
+            <section className="flex flex-col gap-6 w-full h-full items-center lg:relative static sm:pb-20 pt-10">
+                <h1 className="text-3xl text-center mt-8 px-4">Veja como é fácil solicitar um resgate e contatar as autoridades locais ou voluntários próximos diretamente:</h1>
+
+                <div className='flex w-full justify-center gap-2 md:static relative py-10'>
+                    <img className='absolute md:static lg:w-[200px] md:w-[160px] w-[80px] sm:w-[120px] sm:top-68 sm:left-12 top-49 left-[1vw]  z-1 ' src={PolicialSOS}></img>
                     <div className='flex flex-col gap-2 sm:flex-row border-sos-purple-100 border-1 max-w-[920px] h-full rounded-lg w-[80%] relative lg:static'>
                       <CarrosselResgate slides={slidesResgate}/>
                     </div> 
+                </div>
+
+                <div className="w-[50%] h-0.5 bg-sos-purple-100"></div>
+
+                <h1 className="text-3xl text-center mt-8 px-4 py-10">E para voluntários, o processo de salvar vidas se tornou prático e coordenado: </h1>
+
+                <div className='flex w-full justify-center gap-2 lg:static relative sm:pl-6'>
+                    <div className='flex flex-col gap-2 sm:flex-row border-sos-purple-100 border-1 max-w-[920px] h-full rounded-lg w-[80%] relative lg:static'>
+                      <CarrosselResgate slides={slidesResgateVoluntario}/>
+                    </div> 
+                    <img className='absolute lg:static lg:w-[400px] lg:pt-85 md:w-[300px] w-[180px] sm:w-[200px] sm:top-120 md:top-150  sm:right-1 top-75 right-[1vw] z-1 ' src={BarcoSOS}></img>
                 </div>
             </section>
         </section>

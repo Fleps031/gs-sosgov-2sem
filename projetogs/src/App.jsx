@@ -15,8 +15,7 @@ function App() {
       <About></About>
       <Solution></Solution>
       <Register></Register>
-      <Footer></Footer>
-    
+      <Footer></Footer>    
     </>
   )
 }
