@@ -5,6 +5,7 @@ import Home from './routes/Home'
 import Solution from './routes/Solução'
 import About from './routes/Sobre'
 import Register from './routes/Cadastrar'
+import Contact from './routes/Contato'
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
       <About></About>
       <Solution></Solution>
       <Register></Register>
+      <Contact></Contact>
       <Footer></Footer>    
     </>
   )
