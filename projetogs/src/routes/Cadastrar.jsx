@@ -1,7 +1,7 @@
 function Register() {
   return (
     <>
-     <p>Register Works!</p>
+     <section></section>
     </>
   )
 }

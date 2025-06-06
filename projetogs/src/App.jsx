@@ -4,17 +4,17 @@ import Footer from './components/Footer'
 import Home from './routes/Home'
 import Solution from './routes/Solução'
 import About from './routes/Sobre'
+import Register from './routes/Cadastrar'
 
 function App() {
 
   return (
     <>
       <Nav></Nav>
-      <main>
-        <Home></Home>
-        <About></About>
-        <Solution></Solution>
-      </main>
+      <Home></Home>
+      <About></About>
+      <Solution></Solution>
+      <Register></Register>
       <Footer></Footer>
     
     </>
