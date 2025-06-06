@@ -8,6 +8,10 @@ import RescueDownload from '../assets/imgs/CarRes1.png';
 import RescueButton from '../assets/imgs/CarRes2.png';
 import RescueRequest from '../assets/imgs/CarRes3.png';
 
+import ResVolMap from '../assets/imgs/ResVol1.png';
+import ResVolFilter from '../assets/imgs/ResVol2.png';
+import ResVolAccept from '../assets/imgs/ResVol3.png';
+
 import PolicialSOS from '../assets/imgs/PolicialSOS.svg'
 import BarcoSOS from '../assets/imgs/BarcoSOS.svg'
 
@@ -128,9 +132,9 @@ function Solution() {
     ]
 
     let slidesResgateVoluntario = [
-      {label:'Resgates na sua região atualizados em tempo real', description:'', src: RescueDownload },
-      {label:'Filtre as solicitações próximas de você', description:'', src: RescueButton },
-      {label:'Aceite o chamado e salve vidas!', description:'', src: RescueRequest },
+      {label:'Resgates na sua região atualizados em tempo real', description:'', src: ResVolMap },
+      {label:'Filtre as solicitações próximas de você', description:'', src: ResVolFilter },
+      {label:'Aceite o chamado e salve vidas!', description:'', src: ResVolAccept },
     ]
 
     return (
