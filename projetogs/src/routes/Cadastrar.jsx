@@ -1,8 +1,12 @@
 import CadastroSOS from '../assets/imgs/CadastroSOS.png'
 import Curativo from '../assets/imgs/Curativo.svg'
+import { useNavigate } from "react-router";
+
 
 
 function Register() {
+  const navigate = useNavigate();
+
   return (
     <>
      <section className="flex flex-col gap-6 w-full h-[80vh] md:h-[90vh] justify-start sm:p-20 md:px-10 sm:px-0 py-6 items-center bg-black overflow-hidden mt-20" id="Cadastro">
@@ -16,7 +20,10 @@ function Register() {
               O SOS Gov ainda está em construção — sua opinião nos ajuda a melhorar e fazer a diferença!
             </p>
           </div>
-          <button className='bg-sos-purple-100 min-w-80 min-h-12 text-sm rounded-full text-white text-thin cursor-pointer border-sos-purple-100 border-2 hover:bg-black active:bg-black focus:bg-black ease-in-out md:duration-200'>
+          <button 
+              className='bg-sos-purple-100 min-w-80 min-h-12 text-sm rounded-full text-white text-thin cursor-pointer border-sos-purple-100 border-2 hover:bg-black active:bg-black focus:bg-black ease-in-out md:duration-200'
+              onClick={() => {navigate("/login", { replace: true })}}
+          >
              <p className='text-2xl'>Juntar-se</p>
           </button>
      </section>

@@ -2,9 +2,13 @@ import { Link } from "react-router";
 import logo from '../assets/Logo-Sos-Gov.png';
 import MenuIcon from '../assets/burguer.svg';
 import { useState } from "react";
+import { useNavigate } from "react-router";
+
 
 function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const navigate = useNavigate();
 
   return (
     <>
@@ -30,7 +34,7 @@ function Nav() {
               </nav>
             </div>
 
-            <button className='bg-sos-purple-100 min-w-21 h-6 text-sm rounded-xl text-white text-thin cursor-pointer  hover:bg-black active:bg-black transition hidden sm:block'>
+            <button className='bg-sos-purple-100 min-w-21 h-6 text-sm rounded-xl text-white text-thin cursor-pointer  hover:bg-black active:bg-black transition hidden sm:block' onClick={() => {navigate("/login", { replace: true })}}>
                 Obter
             </button>
 
