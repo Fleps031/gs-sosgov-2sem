@@ -11,7 +11,7 @@ function About() {
         </div>
         <div className="flex flex-row w-full sm:w-[40%] sm:h-full h-[400px] bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${Bombeiros})`}}></div>
       </section>  
-      <section className="flex flex-col gap-6 w-full h-full items-center justify-center sm:p-8 p-4">
+      <section className="flex flex-col gap-6 w-full h-full items-center justify-center sm:p-8 p-4" id="Sobre">
           <h1 className="text-3xl text-center">Conheça o SOS GOV</h1>
           <iframe className='flex w-full sm:h-full max-w-[960px] sm:min-h-[480px] sm:max-h-[460px] h-[320px]' src="https://www.youtube.com/embed/sls4XBg_9ws"></iframe>
           <p className='text-center text-2xl'></p>

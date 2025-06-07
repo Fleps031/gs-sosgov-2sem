@@ -1,10 +1,11 @@
 import CadastroSOS from '../assets/imgs/CadastroSOS.png'
 import Curativo from '../assets/imgs/Curativo.svg'
 
+
 function Register() {
   return (
     <>
-     <section className="flex flex-col gap-6 w-full h-[80vh] md:h-[90vh] justify-start sm:p-20 md:px-10 sm:px-0 py-6 items-center bg-black overflow-hidden mt-20">
+     <section className="flex flex-col gap-6 w-full h-[80vh] md:h-[90vh] justify-start sm:p-20 md:px-10 sm:px-0 py-6 items-center bg-black overflow-hidden mt-20" id="Cadastro">
           <div className="flex flex-row lg:w-[60%] w-[90%] h-full bg-center bg-cover relative" style={{ backgroundImage: `url(${CadastroSOS})`}}>
             <img src={Curativo} alt="Icone de um curativo com as cores temas do SOS GOV" className='w-[30%] lg:w-[20%] h absolute -right-10 -top-8 z-10' />
           </div>

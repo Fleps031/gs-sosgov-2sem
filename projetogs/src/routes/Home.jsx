@@ -3,7 +3,7 @@ import MegaFlair from '../assets/MegaFlair.svg'
 function Home() {
   return (
     <>
-      <section>
+      <section id="Home">
           <section className="flex flex-row w-full h-100 bg-center bg-cover relative z-50" style={{ backgroundImage: `url(${MegaFlair})`}}></section>
           <section className='bg-sos-purple-100 w-full h-full sm:h-75 grid grid-cols-1 gap-10 sm:gap-0 sm:grid-cols-3 pl-8 pr-8 sm:pl-7 sm:pr-7 pb-8 sm:pb-0 items-center'>
             <div className='grid grid-rows-1 gap-3 sm:gap-0'>
